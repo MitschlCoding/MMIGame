@@ -58,16 +58,7 @@
 //! [0]
 Helper::Helper()
 {
-    QLinearGradient gradient(QPointF(50, -20), QPointF(80, 20));
-    gradient.setColorAt(0.0, Qt::white);
-    gradient.setColorAt(1.0, QColor(35, 35, 70));
-
-    background = QBrush(QColor(35, 35, 70));
-    circleBrush = QBrush(gradient);
-    circlePen = QPen(Qt::black);
-    circlePen.setWidth(1);
-    textPen = QPen(Qt::white);
-    textFont.setPixelSize(50);
+    background = QBrush(QColor(233,216,166));
 }
 //! [0]
 
@@ -75,6 +66,6 @@ Helper::Helper()
 void Helper::paint(QPainter *painter, QPaintEvent *event, int elapsed, int x, int y)
 {
     painter->fillRect(event->rect(), background);
-    painter->setBrush(QColor(255,255,255));
+    painter->setBrush(QColor(0, 12, 17));
     painter->drawEllipse(x,y, 50, 50);
 }
